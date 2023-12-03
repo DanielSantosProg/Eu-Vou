@@ -1,0 +1,16 @@
+.register {
+  text-align: center;
+}
+
+.register p {
+  color: #fac213;
+}
+
+.register h1 {
+  color: #d61c4e;
+  padding-top: 1.5em;
+}
+
+.register h1 span {
+  color: #f77e21;
+}
