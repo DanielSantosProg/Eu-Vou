@@ -1,0 +1,30 @@
+.about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 1em;
+  color: #d61c4e;
+}
+
+p {
+  color: #f77e21;
+  margin-bottom: 2em;
+}
+
+span {
+  color: #f77e21;
+}
+
+.about a {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 15px;
+}
+
+.about a:hover {
+  color: #fff;
+}
