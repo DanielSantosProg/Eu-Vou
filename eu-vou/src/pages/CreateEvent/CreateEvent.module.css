@@ -1,0 +1,12 @@
+.create_event {
+  text-align: center;
+}
+
+.create_event h2 {
+  font-size: 2.2em;
+}
+
+.create_event p {
+  color: rgb(154, 153, 153);
+  margin-bottom: 2em;
+}
