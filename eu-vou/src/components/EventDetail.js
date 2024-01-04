@@ -7,13 +7,14 @@ const EventDetail = ({ event }) => {
   const { seconds, nanoseconds } = event.createdAt;
 
   return (
-    <div>
+    <div className={styles.event_detail}>
       <img src={event.image} alt={event.eventName} />
       <h2>{event.eventName}</h2>
       {/* Rendering the extracted values */}
-      <div>
+      <div className={styles.tags}>
+        <p className={styles.tag}>TAGS:</p>
         {event.tagsArray.map((tag) => (
-          <p key={tag}>{tag}</p>
+          <p key={tag}>{tag}, </p>
         ))}
       </div>
       <Link to={`/events/${event.id}`} className="btn btn-outline">
