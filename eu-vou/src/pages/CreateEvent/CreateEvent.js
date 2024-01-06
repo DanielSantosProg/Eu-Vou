@@ -12,6 +12,7 @@ const CreateEvent = () => {
   const [eventLocation, setEventLocation] = useState("");
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState("");
+  const [eventDateTime, setEventDateTime] = useState("");
 
   const { user } = useAuthValue();
   const { insertDocument, response } = useInsertDocument("events");
@@ -29,7 +30,14 @@ const CreateEvent = () => {
 
     const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
 
-    if (!eventName || !image || !eventLocation || !tags || !description) {
+    if (
+      !eventName ||
+      !image ||
+      !eventLocation ||
+      !tags ||
+      !description ||
+      !eventDateTime
+    ) {
       setFormError("Preencha todos os campos!");
     }
 
@@ -40,6 +48,7 @@ const CreateEvent = () => {
       image,
       description,
       eventLocation,
+      eventDateTime,
       tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
@@ -93,6 +102,16 @@ const CreateEvent = () => {
             placeholder="Descreva aonde irá acontecer o evento."
             onChange={(e) => setEventLocation(e.target.value)}
             value={eventLocation}
+          />
+        </label>
+        <label>
+          <span>Data e Hora do evento:</span>
+          <input
+            type="datetime-local"
+            name="eventDateTime"
+            required
+            onChange={(e) => setEventDateTime(e.target.value)}
+            value={eventDateTime}
           />
         </label>
         <label>

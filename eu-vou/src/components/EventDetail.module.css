@@ -28,3 +28,29 @@
   font-size: 0.8em;
   margin-bottom: 1em;
 }
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Ajuste conforme necessário */
+}
+
+.btn_green {
+  width: 10px;
+  height: 10px;
+  border-radius: 13px;
+  border: none;
+  background-color: rgb(95, 197, 95);
+}
+
+.btn_red {
+  width: 10px;
+  height: 10px;
+  border-radius: 13px;
+  border: none;
+  background-color: rgb(229, 39, 39);
+}
+
+.statusText {
+  margin-left: 10px; /* Ajuste conforme necessário */
+}

@@ -31,7 +31,7 @@ const Home = () => {
         {events && events.length === 0 && (
           <div className={styles.noevents}>
             <p>Não existem Eventos cadastrados</p>
-            <Link to="/posts/create" className="btn">
+            <Link to="/events/create" className="btn">
               Criar Evento
             </Link>
           </div>
