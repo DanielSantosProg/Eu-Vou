@@ -8,9 +8,16 @@ import EventDetail from "../../components/EventDetail";
 const Home = () => {
   const [query, setQuery] = useState("");
   const { documents: events, loading } = useFetchDocuments("events");
+
+  const navigate = useNavigate();
+
   console.log(events);
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (query) {
+      return navigate(`/search?q=${query}`);
+    }
   };
 
   return (
