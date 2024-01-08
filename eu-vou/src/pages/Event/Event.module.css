@@ -1,0 +1,29 @@
+.event_container {
+  text-align: center;
+}
+
+.event_container h2 {
+  margin-bottom: 0.2em;
+}
+
+.event_container p {
+  color: #000;
+}
+
+.event_container span {
+  font-weight: bold;
+}
+
+.event_container .tags {
+  display: flex;
+  justify-content: center;
+}
+
+.tags a {
+  margin-right: 1em;
+  margin-bottom: 0px;
+}
+
+.event_container span {
+  display: block;
+}

@@ -19,7 +19,6 @@ const EventDetail = ({ event }) => {
     <div className={styles.event_detail}>
       <img src={event.image} alt={event.eventName} />
       <h2>{event.eventName}</h2>
-      {/* Rendering the extracted values */}
       <div className={styles.buttonContainer}>
         <button className={active ? styles.btn_green : styles.btn_red}></button>
         <span className={styles.statusText}>
@@ -27,13 +26,15 @@ const EventDetail = ({ event }) => {
         </span>
       </div>
       <div className={styles.tags}>
-        <p className={styles.tag}>TAGS:</p>
+        <p className={styles.tag}>
+          <span>TAGS:</span>
+        </p>
         {event.tagsArray.map((tag) => (
           <p key={tag}>{tag}, </p>
         ))}
       </div>
       <Link to={`/events/${event.id}`} className="btn btn-outline">
-        View Details
+        Ver Detalhes
       </Link>
     </div>
   );

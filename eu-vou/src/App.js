@@ -16,6 +16,7 @@ import Register from "./pages/Register/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import Search from "./pages/Search/Search";
+import Event from "./pages/Event/Event";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -43,6 +44,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/events/:id" element={<Event />} />
               <Route
                 path="/events/create"
                 element={user ? <CreateEvent /> : <Navigate to="/login" />}

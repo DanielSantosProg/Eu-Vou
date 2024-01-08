@@ -14,7 +14,7 @@ const Search = () => {
 
   return (
     <div className={styles.search_container}>
-      <h2>Search</h2>
+      <h2>Pesquisa pela Tag: {search}</h2>
       <p>
         {events && events.length === 0 && (
           <div className={styles.noposts}>
