@@ -17,6 +17,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import CreateEvent from "./pages/CreateEvent/CreateEvent";
 import Search from "./pages/Search/Search";
 import Event from "./pages/Event/Event";
+import EditEvent from "./pages/EditEvent/EditEvent";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -56,6 +57,10 @@ function App() {
               <Route
                 path="/register"
                 element={!user ? <Register /> : <Navigate to="/" />}
+              />
+              <Route
+                path="/events/edit/:id"
+                element={user ? <EditEvent /> : <Navigate to="/login" />}
               />
               <Route
                 path="/dashboard"

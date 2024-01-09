@@ -1,0 +1,23 @@
+.edit_event {
+  text-align: center;
+}
+
+.edit_event h2 {
+  font-size: 2.2em;
+}
+
+.edit_event p {
+  color: rgb(154, 153, 153);
+  margin-bottom: 2em;
+}
+
+.edit_event .preview_title {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.image_preview {
+  max-width: 100%;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,59 @@
+.dashboard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+}
+
+.dashboard p {
+  color: #000;
+  margin-bottom: 1em;
+}
+
+.noevents {
+  text-align: center;
+}
+
+.noevents p {
+  margin-bottom: 1.5em;
+}
+
+.noevents a {
+  padding: 10px 25px;
+}
+
+.event_header,
+.event_row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 10px;
+}
+
+.event_header {
+  font-weight: bold;
+  border-bottom: 0.5px solid rgb(248, 144, 144);
+}
+
+.event_header span {
+  color: #000;
+}
+
+.event_row button,
+.event_row a {
+  margin: 0 5px;
+  height: 30px;
+  width: 100px;
+  font-size: 0.7em;
+}
+
+.event_row {
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}

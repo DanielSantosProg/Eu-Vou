@@ -22,15 +22,24 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      <h2>Confira nossos Eventos</h2>
-      <form onSubmit={handleSubmit} className={styles.search_form}>
-        <input
-          type="text"
-          placeholder="Busque por tags"
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button className="btn">Pesquisar</button>
-      </form>
+      <h2>
+        Crie um evento <span>OU</span> Procure no nosso site
+      </h2>
+      <div className={styles.top_container}>
+        <Link to="/events/create" className="btn btn-outline">
+          Criar Evento
+        </Link>
+        <p>/</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Digite uma tag"
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button className="btn">Pesquisar</button>
+        </form>
+      </div>
+
       <div>
         {loading && <p>Carregando...</p>}
         {events &&
