@@ -11,6 +11,31 @@
   margin-bottom: 0.5em;
 }
 
+.dashboard button {
+  width: 20em;
+  border-radius: 0px;
+}
+
+.dashboard button:hover {
+  width: 20em;
+}
+
+.inactiveButton {
+  background: #ccc;
+  border: none;
+  color: #000;
+}
+
+.menuButtons {
+  margin-top: 1em;
+  display: flex;
+}
+
+.inactiveButton:hover {
+  border: none;
+  color: #fff;
+}
+
 .dashboard p {
   color: #000;
   margin-bottom: 1em;
