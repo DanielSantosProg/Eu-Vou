@@ -9,6 +9,13 @@
   color: #d61c4e;
 }
 
+.home h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
 .top_container {
   max-width: 100%;
   width: 60%;

@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+.event_container img {
+  max-width: 70%;
+  display: block; /* Make the image a block-level element */
+  margin: 0 auto; /* Center the image */
+}
+
+.event_container button {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.event_container .subbed {
+  background: #ccc;
+  border: 1px solid #eee;
+  color: #000;
+}
+
+.event_container .subbed:hover {
+  box-shadow: none;
+}
+
 .event_container h2 {
   margin-bottom: 1em;
 }

@@ -42,6 +42,7 @@ const Home = () => {
 
       <div>
         {loading && <p>Carregando...</p>}
+        <h3>Confira os eventos mais recentes</h3>
         {events &&
           events.map((event) => <EventDetail key={event.id} event={event} />)}
         {events && events.length === 0 && (

@@ -17,8 +17,8 @@ const EventDetail = ({ event }) => {
 
   return (
     <div className={styles.event_detail}>
-      <img src={event.image} alt={event.eventName} />
       <h2>{event.eventName}</h2>
+      <img src={event.image} alt={event.eventName} />
       <div className={styles.buttonContainer}>
         <button className={active ? styles.btn_green : styles.btn_red}></button>
         <span className={styles.statusText}>
