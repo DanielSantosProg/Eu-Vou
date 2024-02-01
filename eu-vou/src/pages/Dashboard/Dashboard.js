@@ -20,8 +20,7 @@ const Dashboard = () => {
     uid
   );
 
-  const { deleteDocument } = useDeleteDocument("events");
-  const { deleteSub } = useDeleteDocument("userGoingTo");
+  const { deleteDocument } = useDeleteDocument();
 
   function toggleEvents() {
     setEventsActive(true);
@@ -32,6 +31,11 @@ const Dashboard = () => {
     setSubsActive(true);
     setEventsActive(false);
   }
+
+  const getEventName = (eventId) => {
+    const event = events.find((event) => event.id === eventId);
+    return event ? event.eventName : "Evento não encontrado";
+  };
 
   if (loading || subsLoading) {
     return <p>Carregando...</p>;
@@ -74,10 +78,10 @@ const Dashboard = () => {
             ? subs &&
               subs.map((sub) => (
                 <div key={sub.id} className={styles.event_row}>
-                  <p>{sub.id}</p>
+                  <p>{getEventName(sub.eventId)}</p>
                   <div>
                     <button
-                      onClick={() => deleteDocument(sub.id)}
+                      onClick={() => deleteDocument(sub.id, "userGoingTo")}
                       className="btn btn-outline btn-danger"
                     >
                       Excluir
@@ -103,7 +107,7 @@ const Dashboard = () => {
                       Editar
                     </Link>
                     <button
-                      onClick={() => deleteDocument(event.id)}
+                      onClick={() => deleteDocument(event.id, "events")}
                       className="btn btn-outline btn-danger"
                     >
                       Excluir

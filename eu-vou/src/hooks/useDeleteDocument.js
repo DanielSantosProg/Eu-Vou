@@ -20,7 +20,7 @@ const deleteReducer = (state, action) => {
   }
 };
 
-export const useDeleteDocument = (docCollection) => {
+export const useDeleteDocument = () => {
   const [response, dispatch] = useReducer(deleteReducer, initialState);
 
   const [cancelled, setCancelled] = useState(false);
@@ -31,7 +31,7 @@ export const useDeleteDocument = (docCollection) => {
     }
   };
 
-  const deleteDocument = async (id) => {
+  const deleteDocument = async (id, docCollection) => {
     checkCancelBeforeDispatch({
       type: "LOADING",
     });

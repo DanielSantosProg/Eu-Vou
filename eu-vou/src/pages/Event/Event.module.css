@@ -29,6 +29,7 @@
 
 .event_container p {
   color: #000;
+  margin: 2em;
 }
 
 .event_container span {
